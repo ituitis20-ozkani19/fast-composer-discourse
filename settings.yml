@@ -1,0 +1,18 @@
+fast_compose_enabled:
+  default: true
+  type: bool
+fast_compose_title:
+  default: "Unlimited free! AI plant care and cultivation Q&A"
+fast_compose_description:
+  default: "Ask a Question to Sorumatik AI to find instant, step-by-step solutions to any problem."
+fast_compose_min_length:
+  default: 10
+  type: integer
+fast_compose_placeholder:
+  default: "Type or paste your question here..."
+fast_compose_submit_label:
+  default: "Get Answer"
+fast_compose_upload_label:
+  default: "Start question with image"
+fast_compose_ai_selector_label:
+  default: "Select model"

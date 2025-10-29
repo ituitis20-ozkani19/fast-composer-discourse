@@ -1,0 +1,46 @@
+{{#if (theme-setting-enabled "fast_compose_enabled")}}
+  <div id="mini-composer-home-box" class="fast-compose-hidden">
+    <div class="mini-composer-header">
+      <h2>{{theme-setting "fast_compose_title"}}</h2>
+      <div>{{theme-setting "fast_compose_description"}}</div>
+    </div>
+    <form id="mini-composer-form" autocomplete="off">
+      <textarea
+        id="mini-composer-text"
+        required
+        placeholder="{{theme-setting 'fast_compose_placeholder'}}"
+        aria-label="{{theme-setting 'fast_compose_placeholder'}}"></textarea>
+      <div id="mini-composer-error" role="alert"></div>
+      <div class="submit-panel">
+        <div class="ai-selector-wrapper">
+          <button type="button" id="mini-composer-ai-select-btn" aria-haspopup="listbox" aria-expanded="false">
+            <svg class="fa d-icon svg-icon svg-string">
+              <use href="#layer-group"></use>
+            </svg>
+            <span class="ai-model-select-label">{{theme-setting 'fast_compose_ai_selector_label'}}</span>
+          </button>
+          <ul id="ai-model-dropdown" role="listbox">
+            <li class="ai-model-option" role="option" data-model="gpt-4o">GPT-4O</li>
+            <li class="ai-model-option" role="option" data-model="o4-mini">o4-mini</li>
+            <li class="ai-model-option" role="option" data-model="grok-3">Grok-3</li>
+            <li class="ai-model-option" role="option" data-model="deepseek-r1-0528">DeepSeek-R1-0528</li>
+            <li class="ai-model-option" role="option" data-model="gpt-4.1">GPT-4.1</li>
+            <li class="ai-model-option" role="option" data-model="resim-olustur">Create image</li>
+          </ul>
+        </div>
+        <a id="mini-composer-upload-btn" class="btn btn-default no-text btn-icon" aria-label="{{theme-setting 'fast_compose_upload_label'}}" title="{{theme-setting 'fast_compose_upload_label'}}" tabindex="0">
+          <svg class="fa d-icon d-icon-far-image svg-icon svg-string">
+            <use href="#far-image"></use>
+          </svg>
+        </a>
+        <span id="selected-ai-model-label"></span>
+        <button type="submit" class="btn btn-icon-text btn-primary">
+          <svg class="fa d-icon d-icon-plus svg-icon svg-string">
+            <use href="#plus"></use>
+          </svg>
+          <span class="d-button-label">{{theme-setting 'fast_compose_submit_label'}}</span>
+        </button>
+      </div>
+    </form>
+  </div>
+{{/if}}
